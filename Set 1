@@ -1,0 +1,10 @@
+1.DDL operations: Create a copy of the "employees" table named "employees_backup" without including the data.
+create table Employees_backup 
+AS Select * from Employees;
+
+2.DML operations (UPDATE): Update the salary of all employees in the "employees_backup" table by adding a 15% raise for those who were hired in the year 2000.
+Update employees_backup
+ set salary= salary * 1,15
+ where year (hire_date)=2000;
+ 
+3.
